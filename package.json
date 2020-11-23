@@ -1,0 +1,27 @@
+{
+  "name": "postman-sdk",
+  "version": "0.0.1",
+  "description": "��\r\u0000 \u0000",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  },
+  "scripts": {
+    "test": "mocha --recursive --require ./tests/mochaRequire.js tests/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiger31/postman-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiger31/postman-sdk/issues"
+  },
+  "homepage": "https://github.com/tiger31/postman-sdk#readme"
+}
