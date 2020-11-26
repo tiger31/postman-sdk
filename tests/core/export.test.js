@@ -84,7 +84,7 @@ describe("Export module", () => {
 
             var expectedExports = utils.mapObjectKeys(expected, utils.mappers.prefix(key, delimiter))
 
-            exportModule._deepExportObject(scope, key, objToExport, { delimiter: });
+            exportModule._deepExportObject(scope, key, objToExport, { delimiter });
             expect(global.pm).to.include.property(scope)
                 .and.to.include(expectedExports)
         })
