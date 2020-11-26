@@ -6,13 +6,17 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {},
+  "dependencies": {
+    "acorn": "^8.0.4",
+    "acorn-walk": "^8.0.0"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.2.1"
   },
   "scripts": {
-    "test": "mocha --recursive --require ./tests/mochaRequire.js tests/**/*.test.js"
+    "test": "mocha --recursive --require ./tests/mochaRequire.js tests/**/*.test.js",
+    "build": "node builder.js"
   },
   "repository": {
     "type": "git",
