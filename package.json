@@ -18,8 +18,8 @@
   },
   "scripts": {
     "test": "mocha --recursive --require ./tests/mochaRequire.js tests/**/*.test.js",
-    "coverage": "nyc --reporter lcov npm run test",
-    "codecov": "codecov",
+    "coverage": "nyc --reporter=lcov npm run test",
+    "codecov": "codecov --disable=gcv",
     "build": "node builder.js"
   },
   "repository": {
