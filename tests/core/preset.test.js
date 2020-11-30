@@ -2,7 +2,7 @@ const core = new (require(`../../core.js`))();
 const { expect } = require('chai');
 const pm = require('../pm');
 
-describe("Export module", () => {
+describe("Preset module", () => {
     //Emit postman behaviour
     beforeEach(() => {
         global.pm = pm();

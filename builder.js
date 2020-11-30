@@ -28,7 +28,7 @@ for (const moduleFile of modules) {
                 const nodeFn = node.arguments[fnArgIndex];
                 const fnBody = fileContent.substring(nodeFn.body.start, nodeFn.body.end);
                 const mathces = fnBody.match(moduleFnTrimmer);
-                if (!mathces.groups && !mathces.groups.body) {
+                if (!mathces.groups || !mathces.groups.body) {
                     throw SyntaxError(`Module function fount but it's bodu can't be determinde ${moduleFile}`)
                 }
                 console.log(mathces.groups.body);

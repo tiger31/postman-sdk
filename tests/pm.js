@@ -5,6 +5,9 @@ const container = () => {
         },
         set(key, value) {
             return this[key] = value;
+        },
+        unset(key) {
+            return delete this[key];
         }
     }
 }
