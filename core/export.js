@@ -10,6 +10,11 @@ module.exports = (core) => core.get((utils) => {
             console.log(`[${scope}] ${name} -> ${variable}`);
     }
 
+    utils._exportObject = (scope, obj, options = {}) => {
+        for (const key in obj)
+            utils._exportVariable(scope, key, obj[key], options);
+    }
+
     utils._deepExportObject = (scope, prefix, obj, options = {}) => {
         const { 
             delimiter = '.'

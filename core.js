@@ -5,10 +5,6 @@ module.exports = class CatSDKCore {
         return this._resolveDeps(required, exportFn, this.module)
     }
 
-    getClass(required, exportFn) {
-        return this._resolveDeps(required, exportFn, this.class)
-    }
-
     _resolveDeps(required, exportFn, resolveFn) {
         const requires = required instanceof Function;
         const requiredModules = (requires) ? [] : required;
@@ -24,11 +20,6 @@ module.exports = class CatSDKCore {
     module(moduleName) {
         const module = this._resolve('core', moduleName);
         return module(this);
-    }
-
-    class(className) {
-        const classModule = this._resolve('classes', className);
-        return classModule(this);
     }
 
     _resolve(...path) {

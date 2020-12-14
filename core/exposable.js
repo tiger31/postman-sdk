@@ -2,7 +2,7 @@
  * Abstract class, commonly desinged to be inherited from objects with generated properties
  * _expose(options) method exports all properties from class expect constructor
  */
-module.exports = (core) => core.class((utils) => {
+module.exports = (core) => core.get((utils) => {
     utils.Exposable = class Exposable {
         _expose(options) {
             const {
